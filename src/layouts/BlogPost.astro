@@ -1,0 +1,98 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<header class="post-header">
+					<div class="meta">
+						<FormattedDate date={pubDate} />
+						{updatedDate && (
+							<span class="updated">
+								&middot; Updated <FormattedDate date={updatedDate} />
+							</span>
+						)}
+					</div>
+					<h1>{title}</h1>
+					{description && <p class="description">{description}</p>}
+				</header>
+
+				{heroImage && (
+					<div class="hero-image">
+						<Image width={680} height={360} src={heroImage} alt="" />
+					</div>
+				)}
+
+				<div class="prose">
+					<slot />
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.post-header {
+		margin-bottom: 2rem;
+		padding-bottom: 1.5rem;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.meta {
+		font-size: 0.875rem;
+		color: var(--text-muted);
+		margin-bottom: 0.75rem;
+	}
+
+	.updated {
+		font-style: italic;
+	}
+
+	.post-header h1 {
+		font-size: 2rem;
+		line-height: 1.2;
+		margin-bottom: 0.75rem;
+	}
+
+	.description {
+		font-size: 1.1rem;
+		color: var(--text-muted);
+		margin: 0;
+	}
+
+	.hero-image {
+		margin-bottom: 2rem;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		border-radius: 8px;
+	}
+
+	.prose {
+		line-height: 1.8;
+	}
+
+	@media (max-width: 680px) {
+		.post-header h1 {
+			font-size: 1.625rem;
+		}
+	}
+</style>

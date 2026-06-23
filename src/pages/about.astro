@@ -1,0 +1,151 @@
+---
+import { Image } from 'astro:assets';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+import avatar from '../assets/nishat.png';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About — ${SITE_TITLE}`} description="I'm Nishat. I write about WordPress SaaS marketing, systems thinking, and what it actually takes to grow a product team from the inside." />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="about-header">
+				<Image src={avatar} alt="Nishat Shahriyar" class="avatar" width={120} height={120} />
+				<h1>About</h1>
+			</div>
+			<div class="prose">
+				<p>
+					I'm Nishat Shahriyar. I write about WordPress SaaS marketing, systems thinking, and what it actually
+					takes to grow a product team from the inside.
+				</p>
+
+				<p>
+					For the past five years I've worked at <a href="https://wpmanageninja.com" target="_blank" rel="noopener">WPManageNinja</a>,
+					the company behind Fluent Forms, Ninja Tables, Fluent Support, FluentCommunity, FluentCart,
+					FluentPlayer, Paymattic, and FluentBooking. I started as a content writer in 2021, moved into
+					SEO content strategy, then led a content team and ran marketing for Fluent Support (10K users).
+					Now I own marketing for Fluent Forms (700K users), Ninja Tables (80K users), and FluentPlayer
+					(newly launched) — running content, SEO, lifecycle email, and AI-augmented workflows for a
+					five-person team.
+				</p>
+
+				<p>
+					That's the day job. This blog is where I write down what I've actually learned doing it: the
+					systems, the mistakes, the stuff that worked because it was boring and repeatable, not because
+					it was clever.
+				</p>
+
+				<p>
+					I'm also active in the WordPress community. I run 3 newsletters: <a href="https://wpmore.net" target="_blank" rel="noopener"> WP More</a> for WordPress & WP community news, 
+				    <a href="https://serplabseo.com" target="_blank" rel="noopener"> SERPLabSEO</a> for SEO and marketing updates,
+					a personal curated one on tech, ceator economy, pop culture and business at <a href="https://nishishere.com" target="_blank" rel="noopener">nishishere.com</a>,
+					and a blog <a href="https://nishnama.com" target="_blank" rel="noopener">Nishnama</a>, where I write in
+					Bangla, my native language.
+				</p>
+
+				<p>
+					Most of what shows up here sits at the intersection of WordPress, SEO, AI-augmented content
+					systems, and personal branding — partly because that's my job, and partly because most
+					marketing advice for SaaS companies skips the operational layer that actually makes it work.
+				</p>
+
+				<p>
+					This blog also doubles as a journal — thoughts and opinions on life, marriage, raising a kid,
+					work, and whatever else I find interesting at the time.
+				</p>
+
+				<p>
+					Short version: I build content systems for WordPress products, and I'm trying to get better
+					at explaining how, in public.
+				</p>
+
+				<div class="social">
+					<span class="social-label">Follow me</span>
+					<a href="https://twitter.com/rednishat" target="_blank" rel="noopener">X</a>
+					<a href="https://www.linkedin.com/in/nishatshahriyar/" target="_blank" rel="noopener">LinkedIn</a>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.about-header {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+		margin-bottom: 1.75rem;
+	}
+
+	.avatar {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		object-fit: cover;
+		flex-shrink: 0;
+	}
+
+	h1 {
+		margin: 0;
+	}
+
+	.prose {
+		max-width: 600px;
+	}
+
+	.prose p {
+		margin-bottom: 1.4rem;
+		color: var(--text);
+	}
+
+	.prose a {
+		color: var(--accent);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
+	.prose a:hover {
+		color: var(--accent-hover);
+	}
+
+	.social {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-top: 2.5rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--border);
+		flex-wrap: wrap;
+	}
+
+	.social-label {
+		font-size: 0.875rem;
+		color: var(--text-muted);
+		font-weight: 500;
+		margin-right: 0.25rem;
+	}
+
+	.social a {
+		font-size: 0.875rem;
+		font-weight: 500;
+		color: var(--text-muted);
+		text-decoration: none;
+		padding: 0.3rem 0.75rem;
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		transition: color 0.15s, border-color 0.15s;
+	}
+
+	.social a:hover {
+		color: var(--accent);
+		border-color: var(--accent);
+		text-decoration: none;
+	}
+</style>
