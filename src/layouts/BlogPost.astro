@@ -9,11 +9,33 @@ import Header from '../components/Header.astro';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'BlogPosting',
+	headline: title,
+	description,
+	datePublished: pubDate.toISOString(),
+	dateModified: (updatedDate ?? pubDate).toISOString(),
+	url: Astro.url.href,
+	author: {
+		'@type': 'Person',
+		name: 'Nishat Shahriyar',
+		url: new URL('/about', Astro.site).href,
+	},
+	publisher: {
+		'@type': 'Person',
+		name: 'Nishat Shahriyar',
+		url: Astro.site?.href,
+	},
+	...(heroImage && { image: new URL(heroImage.src, Astro.site).href }),
+};
 ---
 
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
 	</head>
 	<body>
 		<Header />

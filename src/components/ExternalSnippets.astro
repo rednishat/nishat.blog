@@ -1,0 +1,38 @@
+---
+/*
+ * ExternalSnippets.astro
+ * ─────────────────────────────────────────────────────────────
+ * Central place to manage all third-party head scripts.
+ * This component is loaded first inside <head> on every page.
+ *
+ * To add a new snippet: paste it in the relevant section below,
+ * or create a new section following the same pattern.
+ * To disable a snippet: comment it out.
+ * ─────────────────────────────────────────────────────────────
+ */
+---
+
+<!-- ── Google Analytics ──────────────────────────────────────── -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QNTCGMT79H" is:inline></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QNTCGMT79H');
+</script>
+<!-- ── End Google Analytics ──────────────────────────────────── -->
+
+
+<!-- ── Google Tag Manager ────────────────────────────────────── -->
+<!-- Paste GTM snippet here if needed, then remove this comment -->
+<!-- ── End Google Tag Manager ───────────────────────────────── -->
+
+
+<!-- ── Facebook Pixel ────────────────────────────────────────── -->
+<!-- Paste Meta Pixel snippet here if needed, then remove this comment -->
+<!-- ── End Facebook Pixel ────────────────────────────────────── -->
+
+
+<!-- ── Other Scripts ─────────────────────────────────────────── -->
+<!-- Hotjar, Clarity, Crisp, etc. — add below -->
+<!-- ── End Other Scripts ──────────────────────────────────────── -->
