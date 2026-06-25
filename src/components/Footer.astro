@@ -3,6 +3,30 @@ const year = new Date().getFullYear();
 ---
 
 <footer>
+	<div class="subscribe">
+		<form
+			action="https://app.kit.com/forms/4833546/subscriptions"
+			method="post"
+			data-sv-form="4833546"
+			data-uid="d8a074882b"
+			data-format="inline"
+			data-version="6"
+			class="footer-kit-form"
+		>
+			<span class="subscribe-label">Get new posts in your inbox</span>
+			<div class="subscribe-row">
+				<input
+					name="email_address"
+					type="email"
+					placeholder="your@email.com"
+					required
+					aria-label="Email address"
+				/>
+				<button type="submit">Subscribe</button>
+			</div>
+			<ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+		</form>
+	</div>
 	<div class="footer-inner">
 		<span>&copy; {year} Nishat Shahriyar</span>
 		<div class="links">
@@ -16,12 +40,82 @@ const year = new Date().getFullYear();
 		</div>
 	</div>
 </footer>
+<script is:inline src="https://f.convertkit.com/ckjs/ck.6.js"></script>
 
 <style>
 	footer {
 		padding: 2rem 1.5rem;
 		border-top: 1px solid var(--border);
 		margin-top: auto;
+	}
+
+	.subscribe {
+		max-width: 680px;
+		margin: 0 auto 1.5rem;
+		padding-bottom: 1.5rem;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.subscribe-label {
+		display: block;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: var(--text-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.07em;
+		margin-bottom: 0.6rem;
+	}
+
+	.subscribe-row {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.subscribe-row input {
+		flex: 1;
+		padding: 0.45rem 0.75rem;
+		font-size: 0.875rem;
+		border: 1px solid var(--border);
+		border-radius: 5px;
+		background: var(--bg);
+		color: var(--text);
+		outline: none;
+		transition: border-color 0.15s;
+		font-family: inherit;
+	}
+
+	.subscribe-row input:focus {
+		border-color: var(--accent);
+	}
+
+	.subscribe-row button {
+		padding: 0.45rem 1rem;
+		font-size: 0.875rem;
+		font-weight: 500;
+		background: var(--accent);
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background 0.15s;
+		font-family: inherit;
+		white-space: nowrap;
+	}
+
+	.subscribe-row button:hover {
+		background: var(--accent-hover);
+	}
+
+	.formkit-alert-error {
+		list-style: none;
+		padding: 0;
+		margin: 0.4rem 0 0;
+		font-size: 0.8rem;
+		color: #ea4110;
+	}
+
+	.formkit-alert:empty {
+		display: none;
 	}
 
 	.footer-inner {
