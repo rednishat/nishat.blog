@@ -75,6 +75,8 @@ Open a tab. Do the first thing.
 
 **You can just do things.**
 
+![You can just do things](../../assets/you-can-just-do-things.jpg)
+
 With Love,
 
 – Nishat Shahriyar
