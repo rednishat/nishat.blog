@@ -2,6 +2,7 @@
 title: 'You Can Just Do Things'
 description: 'I run marketing for 3 WordPress products, manage a 5-person team, have a 3-year-old at home, and publish 4 newsletters every week. No team, no plan, no perfect conditions. You can just do things.'
 pubDate: 'Aug 05 2026'
+heroImage: '../../assets/you-can-just-do-things.jpg'
 ---
 
 Nobody gave me permission to start a newsletter.
