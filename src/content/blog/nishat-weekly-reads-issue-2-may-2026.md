@@ -1,5 +1,5 @@
 ---
-title: "Nishat's Weekly Reads 📖 Issue #2 — The May 2026 Catch-Up"
+title: "Nishat's Monthly Reads 📖 Issue #2 — The May 2026 Catch-Up"
 description: 'A heavy reading month: Google reshaping AI search, WordPress 7.0 shipping, and a lot of smart people thinking out loud about where marketing is headed.'
 pubDate: 'Jun 25 2026'
 heroImage: '../../assets/nishat_weekly_reads_issue2_may.webp'
