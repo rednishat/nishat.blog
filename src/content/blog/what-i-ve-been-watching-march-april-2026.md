@@ -2,6 +2,7 @@
 title: "What I've Been Watching — March & April 2026"
 description: 'A personal curation from Nishat'
 pubDate: 'Apr 16, 2026'
+category: 'watching-list'
 heroImage: '../../assets/nishat-newsletter-feature.webp'
 ---
 

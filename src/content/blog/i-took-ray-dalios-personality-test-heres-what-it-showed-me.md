@@ -2,6 +2,7 @@
 title: "I Took Ray Dalio's Personality Test, Here's What It Showed Me About Myself"
 description: "I took Ray Dalio's free PrinciplesYou test, uploaded the results to Claude, and spent 20 minutes doing a deep analysis. Here's what it showed me about how I work, lead, and scale."
 pubDate: 'Jul 31 2026'
+category: 'personal'
 heroImage: '../../assets/principlesyou-homepage.png'
 ---
 

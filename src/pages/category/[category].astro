@@ -1,0 +1,113 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import Header from '../../components/Header.astro';
+import { CATEGORIES, SITE_TITLE } from '../../consts';
+
+export function getStaticPaths() {
+	return Object.keys(CATEGORIES).map((category) => ({ params: { category } }));
+}
+
+const { category } = Astro.params;
+const info = CATEGORIES[category as keyof typeof CATEGORIES];
+
+const posts = (await getCollection('blog'))
+	.filter((post) => post.data.category === category)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`${info.label} — ${SITE_TITLE}`} description={info.description} noindex />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>{info.label}</h1>
+			<p class="category-desc">{info.description}</p>
+			<ul>
+				{
+					posts.map((post) => (
+						<li>
+							<a href={`/${post.id}/`}>
+								<span class="post-title">{post.data.title}</span>
+								<span class="post-date">
+									<FormattedDate date={post.data.pubDate} />
+								</span>
+							</a>
+							{post.data.description && <p class="post-desc">{post.data.description}</p>}
+						</li>
+					))
+				}
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	h1 {
+		margin-bottom: 0.5rem;
+	}
+
+	.category-desc {
+		color: var(--text-muted);
+		margin: 0 0 2rem;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	li {
+		margin: 0;
+	}
+
+	li a {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 0.75rem 0;
+		border-bottom: 1px solid var(--border);
+		text-decoration: none;
+		color: var(--text);
+	}
+
+	li a:hover,
+	li a:hover .post-date {
+		color: var(--accent);
+		text-decoration: none;
+	}
+
+	.post-title {
+		font-weight: 500;
+	}
+
+	.post-date {
+		font-size: 0.875rem;
+		color: var(--text-muted);
+		white-space: nowrap;
+		flex-shrink: 0;
+	}
+
+	.post-desc {
+		font-size: 0.875rem;
+		color: var(--text-muted);
+		margin: 0.25rem 0 0.75rem 0;
+	}
+
+	@media (max-width: 500px) {
+		li a {
+			flex-direction: column;
+			gap: 0.1rem;
+		}
+	}
+</style>

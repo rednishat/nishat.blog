@@ -2,6 +2,7 @@
 title: "What I've Been Watching — Issue #2 — May 2026"
 description: 'A personal curation of videos worth your time — money & creators, AI & tools, film & pop culture.'
 pubDate: 'Jun 25 2026'
+category: 'watching-list'
 heroImage: '../../assets/nishat-newsletter-feature-issue2-may.webp'
 ---
 

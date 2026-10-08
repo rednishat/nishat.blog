@@ -2,6 +2,7 @@
 title: "Nishat's Monthly Reads 📖 Issue #3 — The June & July 2026 Catch-Up"
 description: "150 reads from June and July 2026 — AI search's new rules, WordPress's shifting reality, social platforms, and a creator economy in flux."
 pubDate: 'Aug 30 2026'
+category: 'reading-list'
 heroImage: '../../assets/nishat_monthly_reads_issue3_june_july.webp'
 ---
 

@@ -178,3 +178,10 @@ hr {
 	clip-path: inset(50%);
 	white-space: nowrap;
 }
+
+.prose figcaption {
+	text-align: center;
+	font-size: 0.875rem;
+	color: var(--text-muted);
+	margin-top: 0.5rem;
+}

@@ -2,6 +2,7 @@
 title: 'How My Fear Become My Main Motivator'
 description: 'I feared staying average. That fear changed everything.'
 pubDate: 'Nov 04 2022'
+category: 'personal'
 heroImage: '../../assets/nishat-2017-vs-2021.jpg'
 ---
 

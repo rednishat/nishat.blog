@@ -2,6 +2,7 @@
 title: "What I've Been Watching — Issue #4 — August 2026"
 description: "A personal YouTube watchlist recap for August 2026 — business, AI, WordPress drama, the MrBeast saga, and a Liziqi comeback. 37 videos worth your time."
 pubDate: 'Sep 12 2026'
+category: 'watching-list'
 heroImage: '../../assets/nishat_watching_issue4_august.webp'
 ---
 

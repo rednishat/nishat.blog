@@ -2,6 +2,7 @@
 title: "Nishat's Weekly Reads 📖 Issue #1 — Week of April 7, 2026"
 description: 'Search, AI, and the internet quietly changing — curated for friends and family.'
 pubDate: 'Apr 16, 2026'
+category: 'reading-list'
 heroImage: '../../assets/nishat_weekly_reads_issue1.webp'
 ---
 

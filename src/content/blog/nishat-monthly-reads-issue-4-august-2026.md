@@ -2,6 +2,7 @@
 title: "Nishat's Monthly Reads 📖 Issue #4 — The August 2026 Catch-Up"
 description: "A month-end catch-up on everything worth reading from August 2026 — WordPress 7.1's launch drama, Google's spam update, AI search shifts, and 82 more reads across 6 categories."
 pubDate: 'Sep 12 2026'
+category: 'reading-list'
 heroImage: '../../assets/nishat_monthly_reads_issue4_august.webp'
 ---
 

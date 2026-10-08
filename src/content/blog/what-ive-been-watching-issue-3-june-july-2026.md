@@ -2,6 +2,7 @@
 title: "What I've Been Watching — Issue #3 — June & July Recap 2026"
 description: "133 videos. Two months. One World Cup. Issue #3 covers June and July — creators, Messi, Bollywood commentary, and everything in between."
 pubDate: 'Aug 30 2026'
+category: 'watching-list'
 heroImage: '../../assets/nishat-newsletter-feature-issue3-june-july.webp'
 ---
 

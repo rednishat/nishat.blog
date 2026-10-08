@@ -12,11 +12,19 @@ interface Props {
 	title: string;
 	description: string;
 	image?: ImageMetadata;
+	noindex?: boolean;
+	canonicalURL?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const {
+	title,
+	description,
+	image = FallbackImage,
+	noindex = false,
+	canonicalURL: canonicalOverride,
+} = Astro.props;
 
-const { title, description, image = FallbackImage } = Astro.props;
+const canonicalURL = canonicalOverride ?? new URL(Astro.url.pathname, Astro.site);
 ---
 
 <ExternalSnippets />
@@ -39,6 +47,8 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <Font cssVariable="--font-atkinson" preload />
+
+{noindex && <meta name="robots" content="noindex, follow" />}
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
