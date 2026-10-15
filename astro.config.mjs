@@ -12,7 +12,8 @@ export default defineConfig({
 			filter: (page) =>
 				!page.includes('/category/') && !page.includes('/nichenish-issue-01/') &&
 				!page.includes('/nichenish-issue-02/') &&
-				!page.includes('/wordcamp-kathmandu-2026-experience/'),
+				!page.includes('/wordcamp-kathmandu-2026-experience/') &&
+				!page.includes('/wordcamp-sylhet-2026-experience/'),
 		})],
 	fonts: [
 		{

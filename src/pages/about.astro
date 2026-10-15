@@ -5,12 +5,69 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_TITLE } from '../consts';
 import avatar from '../assets/nishat.png';
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	'@id': 'https://nishat.blog/#nishat',
+	name: 'Nishat Shahriyar',
+	alternateName: ['Nish', 'Redwanul Karim Chowdhury'],
+	description:
+		'Nishat Shahriyar leads marketing for Fluent Forms, Ninja Tables, and FluentPlayer at WPManageNinja (AuthLab). He writes the WP More newsletter.',
+	jobTitle: 'Senior Product Marketing Lead',
+	image: new URL(avatar.src, Astro.site).href,
+	url: 'https://nishat.blog',
+	mainEntityOfPage: 'https://nishat.blog/about/',
+	address: {
+		'@type': 'PostalAddress',
+		addressLocality: 'Sylhet',
+		addressCountry: 'BD',
+	},
+	worksFor: {
+		'@type': 'Organization',
+		name: 'WPManageNinja',
+		url: 'https://wpmanageninja.com',
+		parentOrganization: {
+			'@type': 'Organization',
+			name: 'AuthLab',
+		},
+	},
+	knowsAbout: [
+		'WordPress',
+		'WordPress community',
+		'Product marketing',
+		'Marketing systems',
+		'Marketing strategy',
+		'SEO',
+		'Content marketing',
+		'Newsletters',
+		'Creator economy',
+		'AI-assisted marketing',
+	],
+	knowsLanguage: ['en', 'bn'],
+	sameAs: [
+		'https://profiles.wordpress.org/rednishat/',
+		'https://github.com/rednishat',
+		'https://x.com/rednishat',
+		'https://www.linkedin.com/in/nishatshahriyar/',
+		'https://bsky.app/profile/rednishat.bsky.social',
+		'https://rednishat.medium.com',
+		'https://www.youtube.com/@WPMore',
+		'https://www.youtube.com/@LearnWithNish',
+		'https://wpmore.net',
+		'https://serplabseo.com',
+		'https://nishishere.com',
+		'https://nishnama.com',
+		'https://www.nichenish.com/',
+	],
+};
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={`About — ${SITE_TITLE}`} description="I'm Nishat. I write about WordPress SaaS marketing, systems thinking, and what it actually takes to grow a product team from the inside." />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
 	</head>
 	<body>
 		<Header />
@@ -21,17 +78,17 @@ import avatar from '../assets/nishat.png';
 			</div>
 			<div class="prose">
 				<p>
-					I'm Nishat Shahriyar. I write about WordPress SaaS marketing, systems thinking, and what it actually
+					I’m Nishat Shahriyar, Senior Product Marketing Lead at WPManageNinja (AuthLab). I write about WordPress SaaS marketing, systems thinking, and what it actually
 					takes to grow a product team from the inside.
 				</p>
 
 				<p>
 					For the past five years I've worked at <a href="https://wpmanageninja.com" target="_blank" rel="noopener">WPManageNinja</a>,
 					the company behind Fluent Forms, FluentCRM, Ninja Tables, Fluent Support, FluentCommunity, FluentCart,
-					FluentPlayer, Paymattic, and FluentBooking. I started as a content writer in 2021, moved into
-					SEO content strategy, then led a content team and ran marketing for Fluent Support (now 10K users).
-					Now I own marketing for Fluent Forms (700K users), Ninja Tables (70K users), and FluentPlayer
-					(newly launched) — running content, SEO, lifecycle email, and AI-augmented workflows for a
+					FluentPlayer, Paymattic, and FluentBooking. I work from Sylhet, Bangladesh. I started as a Digital Marketer in 2021, moved into
+					Marketing Lead, then led a content team and ran product marketing for Fluent Support (now 10K users).
+					Now I own marketing for Fluent Forms (800K users), Ninja Tables (70K users), and FluentPlayer
+					(newly launched, 2000+ users and growing) — running content, SEO, lifecycle email, and AI-augmented workflows for a
 					five-person team.
 				</p>
 
@@ -42,11 +99,11 @@ import avatar from '../assets/nishat.png';
 				</p>
 
 				<p>
-					I'm also active in the WordPress community. I run 3 newsletters: <a href="https://wpmore.net" target="_blank" rel="noopener"> WP More</a> for WordPress & WP community news, 
-				    <a href="https://serplabseo.com" target="_blank" rel="noopener"> SERPLabSEO</a> for SEO and marketing updates,
-					a personal curated one on tech, ceator economy, pop culture and business at <a href="https://nishishere.com" target="_blank" rel="noopener">nishishere.com</a>,
+					I'm also active in the WordPress community. I run 4 newsletters: <a href="https://wpmore.net" target="_blank" rel="noopener"> WP More</a> for WordPress & WP community news,
+				    <a href="https://serplabseo.com" target="_blank" rel="noopener"> HighDegree* Marketing</a> for SEO, AI and marketing updates,
+					a personal curated one on tech, creator economy, pop culture and business at <a href="https://nishishere.com" target="_blank" rel="noopener">Weekly Nishishere</a>,
 					and a blog <a href="https://nishnama.com" target="_blank" rel="noopener">Nishnama</a>, where I write in
-					Bangla, my native language.
+					Bangla, my native language. I also started documenting my hobby projects at <a href="https://nichenish.com" target="_blank" rel="noopener">NicheNish</a>, the goal is to share what i am learing and creating.
 				</p>
 
 				<p>
@@ -67,9 +124,11 @@ import avatar from '../assets/nishat.png';
 
 					<h2>By the numbers</h2>
 					<ul>
-						<li>Fluent Forms: 300K – 700K users (and growing). Fluent Support: product launch, 1K – 5K users in one year (now 10k).</li>
+						<li>Fluent Forms: 300K – 800K users (and growing). Fluent Support: product launch, 1K – 5K users in one year (now 10k users).</li>
 						<li><a href="https://wpmore.net" target="_blank" rel="noopener">WP More</a>: from 316 to 1,000+ subscribers on Substack in two months.</li>
 						<li><a href="https://nishishere.com" target="_blank" rel="noopener">NishIsHere</a>: 100+ issues and 1,900+ subscribers.</li>
+						<li><a href="https://nichenish.com" target="_blank" rel="noopener">NicheNish</a>: recently started documenting my hobby projects.</li>
+
 						<li><a href="https://nishnama.com" target="_blank" rel="noopener">NishNama</a>: 11,000+ subscribers on its Bangla email list.</li>
 						<li>A five-person content team, and 4 newsletters published alongside the day job.</li>
 					</ul>
